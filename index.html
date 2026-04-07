@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rouge Theory | Official Order Form</title>
+    <title>Rouge Theory | Official Store</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;1,700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -12,11 +12,11 @@
     <a href="#order-form" class="sticky-btn">ORDER NOW</a>
 
     <div class="website-container">
-        <div class="section-box"><img src="Rouge Theory/banner.png" class="full-img"></div>
+        <div class="section-box"><img src="banner.png" class="full-img"></div>
         <div class="timer-bar">Flash Sale Ends In: <span id="timer">02:59:59</span></div>
         
-        <div class="section-box"><img src="Rouge Theory/collection.png" class="full-img"></div>
-        <div class="section-box"><img src="Rouge Theory/features.png" class="full-img"></div>
+        <div class="section-box"><img src="collection.png" class="full-img"></div>
+        <div class="section-box"><img src="features.png" class="full-img"></div>
 
         <div class="gallery-title">
             <h2>THE VINTAGE COLLECTION</h2>
@@ -24,15 +24,15 @@
         </div>
 
         <div class="shade-grid">
-            <div class="shade-card"><img src="Rouge Theory/reine.png"><div class="shade-tag">REINE</div></div>
-            <div class="shade-card"><img src="Rouge Theory/queen.png"><div class="shade-tag">QUEEN</div></div>
-            <div class="shade-card"><img src="Rouge Theory/mademoiselle.png"><div class="shade-tag">MADEMOISELLE</div></div>
-            <div class="shade-card"><img src="Rouge Theory/dame.png"><div class="shade-tag">DAME</div></div>
-            <div class="shade-card"><img src="Rouge Theory/imperatrice.png"><div class="shade-tag">IMPÉRATRICE</div></div>
-            <div class="shade-card"><img src="Rouge Theory/empress.png"><div class="shade-tag">EMPRESS</div></div>
+            <div class="shade-card"><img src="reine.png"><div class="shade-tag">REINE</div></div>
+            <div class="shade-card"><img src="queen.png"><div class="shade-tag">QUEEN</div></div>
+            <div class="shade-card"><img src="mademoiselle.png"><div class="shade-tag">MADEMOISELLE</div></div>
+            <div class="shade-card"><img src="dame.png"><div class="shade-tag">DAME</div></div>
+            <div class="shade-card"><img src="imperatrice.png"><div class="shade-tag">IMPÉRATRICE</div></div>
+            <div class="shade-card"><img src="empress.png"><div class="shade-tag">EMPRESS</div></div>
         </div>
 
-        <div class="section-box"><img src="Rouge Theory/footer-banner.png" class="full-img"></div>
+        <div class="section-box"><img src="footer-banner.png" class="full-img"></div>
 
         <section id="order-form" class="order-section">
             <div class="glass-form">
@@ -42,28 +42,28 @@
                     
                     <div class="input-group">
                         <label>Full Name</label>
-                        <input type="text" name="Name" placeholder="Juan Dela Cruz" required>
+                        <input type="text" name="Name" required>
                     </div>
 
                     <div class="input-group">
                         <label>Phone Number</label>
-                        <input type="tel" name="Phone" placeholder="09123456789" required>
+                        <input type="tel" name="Phone" required>
                     </div>
 
                     <div class="input-group">
-                        <label>Lalamove Delivery Address</label>
-                        <textarea name="Address" rows="2" placeholder="House No., Street, Brgy, City" required></textarea>
+                        <label>Delivery Address (Lalamove)</label>
+                        <textarea name="Address" rows="2" required></textarea>
                     </div>
 
                     <div class="input-group">
                         <label>Select Your Shades (₱180 each)</label>
                         <div class="shade-selection">
-                            <label><input type="checkbox" class="shade-cb" name="Shade_Reine" value="Ordered"> Reine</label>
-                            <label><input type="checkbox" class="shade-cb" name="Shade_Queen" value="Ordered"> Queen</label>
-                            <label><input type="checkbox" class="shade-cb" name="Shade_Mademoiselle" value="Ordered"> Mademoiselle</label>
-                            <label><input type="checkbox" class="shade-cb" name="Shade_Dame" value="Ordered"> Dame</label>
-                            <label><input type="checkbox" class="shade-cb" name="Shade_Imperatrice" value="Ordered"> Impératrice</label>
-                            <label><input type="checkbox" class="shade-cb" name="Shade_Empress" value="Ordered"> Empress</label>
+                            <label><input type="checkbox" class="shade-cb" name="Shade_Reine"> Reine</label>
+                            <label><input type="checkbox" class="shade-cb" name="Shade_Queen"> Queen</label>
+                            <label><input type="checkbox" class="shade-cb" name="Shade_Mademoiselle"> Mademoiselle</label>
+                            <label><input type="checkbox" class="shade-cb" name="Shade_Dame"> Dame</label>
+                            <label><input type="checkbox" class="shade-cb" name="Shade_Imperatrice"> Impératrice</label>
+                            <label><input type="checkbox" class="shade-cb" name="Shade_Empress"> Empress</label>
                         </div>
                     </div>
 
@@ -90,7 +90,6 @@
     </div>
 
     <script>
-        // FORM SUBMISSION AND REDIRECT
         var form = document.getElementById("my-form");
         async function handleSubmit(event) {
           event.preventDefault();
@@ -106,14 +105,13 @@
           }).then(response => {
             if (response.ok) {
               status.style.color = "green";
-              status.innerHTML = "Success! Opening Messenger for confirmation...";
+              status.innerHTML = "Success! Opening Messenger...";
               setTimeout(() => {
-                // Redirect to your Messenger link
                 window.location.href = "https://m.me/andrea.garcia.348414";
               }, 2000);
             } else {
               status.style.color = "red";
-              status.innerHTML = "Error sending order. Please check your internet.";
+              status.innerHTML = "Error. Please check your connection.";
             }
           }).catch(error => {
             status.style.color = "red";
@@ -122,19 +120,16 @@
         }
         form.addEventListener("submit", handleSubmit);
 
-        // REAL-TIME PRICE CALCULATOR
         const checkboxes = document.querySelectorAll('.shade-cb');
         checkboxes.forEach(cb => {
             cb.addEventListener('change', () => {
                 let count = document.querySelectorAll('.shade-cb:checked').length;
-                let total = count * 180;
-                document.getElementById('total-price').innerText = total;
+                document.getElementById('total-price').innerText = count * 180;
                 document.getElementById('item-count').innerText = count;
-                document.getElementById('hidden-total').value = "₱" + total;
+                document.getElementById('hidden-total').value = "₱" + (count * 180);
             });
         });
 
-        // COUNTDOWN TIMER
         let time = 10799; 
         setInterval(() => {
             let h = Math.floor(time/3600), m = Math.floor((time%3600)/60), s = time%60;
