@@ -1,0 +1,36 @@
+body { margin: 0; padding: 0; background: #f8f3f0; font-family: 'Montserrat', sans-serif; }
+.website-container { max-width: 500px; margin: auto; background: white; min-height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+.full-img { width: 100%; height: auto; display: block; }
+.section-box { width: 100%; overflow: hidden; }
+
+.timer-bar { background: #d4a373; color: white; text-align: center; padding: 12px; font-weight: bold; font-size: 14px; }
+
+.gallery-title { text-align: center; padding: 40px 20px 10px; }
+.gallery-title h2 { font-family: 'Bodoni Moda', serif; letter-spacing: 2px; }
+
+.shade-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 15px; }
+.shade-card { position: relative; border-radius: 8px; overflow: hidden; border: 1px solid #eee; }
+.shade-card img { width: 100%; transition: 0.3s; display: block; }
+.shade-card:hover img { transform: scale(1.1); }
+.shade-tag { position: absolute; bottom: 8px; left: 8px; background: white; padding: 4px 10px; font-size: 10px; font-weight: bold; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+
+.order-section { padding: 40px 15px; background: #fffcf9; border-top: 1px solid #f0e0d0; }
+.glass-form { background: white; padding: 30px 20px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+
+.input-group { margin-bottom: 15px; text-align: left; }
+label { font-size: 11px; font-weight: 600; color: #888; text-transform: uppercase; display: block; margin-bottom: 5px; }
+input, textarea, .styled-select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: 'Montserrat'; box-sizing: border-box; font-size: 14px; }
+
+.shade-selection { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+.shade-selection label { text-transform: none; color: #333; font-weight: 400; font-size: 13px; display: flex; align-items: center; gap: 8px; margin: 0; }
+
+.total-box { background: #1a1a1a; color: white; padding: 20px; border-radius: 10px; margin: 25px 0; text-align: center; }
+.total-box p { margin: 0; font-size: 12px; opacity: 0.8; }
+.total-box h3 { margin: 5px 0 0; color: #d4a373; font-family: 'Bodoni Moda'; font-size: 24px; }
+
+.submit-btn { width: 100%; padding: 18px; background: #1a1a1a; color: white; border: none; border-radius: 50px; font-size: 16px; font-weight: bold; cursor: pointer; font-family: 'Bodoni Moda'; transition: 0.3s; }
+.submit-btn:hover { background: #333; transform: translateY(-2px); }
+
+.sticky-btn { position: fixed; bottom: 20px; right: 20px; background: #1a1a1a; color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-size: 12px; font-weight: bold; z-index: 100; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+
+footer { padding: 40px; text-align: center; font-size: 10px; color: #999; letter-spacing: 1px; }
