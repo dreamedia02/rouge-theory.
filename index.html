@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rouge Theory | Official Order Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;1,700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a href="#order-form" class="sticky-btn">ORDER NOW</a>
+
+    <div class="website-container">
+        <div class="section-box">
+            <img src="banner.png" class="full-img" alt="Rouge Theory Banner">
+        </div>
+
+        <div class="timer-bar">
+            Flash Sale Ends In: <span id="timer">02:59:59</span>
+        </div>
+        
+        <div class="section-box">
+            <img src="collection.png" class="full-img" alt="Collection Preview">
+        </div>
+
+        <div class="section-box">
+            <img src="features.png" class="full-img" alt="Product Features">
+        </div>
+
+        <div class="gallery-title">
+            <h2>THE VINTAGE COLLECTION</h2>
+            <p>Select your favorite shades below</p>
+        </div>
+
+        <div class="shade-grid">
+            <div class="shade-card">
+                <img src="reine.png" alt="Reine">
+                <div class="shade-tag">REINE</div>
+            </div>
+            <div class="shade-card">
+                <img src="queen.png" alt="Queen">
+                <div class="shade-tag">QUEEN</div>
+            </div>
+            <div class="shade-card">
+                <img src="mademoiselle.png" alt="Mademoiselle">
+                <div class="shade-tag">MADEMOISELLE</div>
+            </div>
+            <div class="shade-card">
+                <img src="dame.png" alt="Dame">
+                <div class="shade-tag">DAME</div>
+            </div>
+            <div class="shade-card">
+                <img src="imperatrice.png" alt="Imperatrice">
+                <div class="shade-tag">IMPÉRATRICE</div>
+            </div>
+            <div class="shade-card">
+                <img src="empress.png" alt="Empress">
+                <div class="shade-tag">EMPRESS</div>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <img src="footer-banner.png" class="full-img" alt="Footer Banner">
+        </div>
+
+        <section id="order-form" class="order-section">
+            <div class="glass-form">
+                <h2 style="font-family: 'Bodoni Moda'; text-align: center; margin-bottom: 30px;">PLACE YOUR ORDER</h2>
+                
+                <form id="my-form" action="https://formspree.io/f/xvzvlayn" method="POST">
+                    
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" name="Name" placeholder="Juan Dela Cruz" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Phone Number</label>
+                        <input type="tel" name="Phone" placeholder="0912 345 6789" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Delivery Address</label>
+                        <textarea name="Address" rows="2" placeholder="House No., Street, Brgy, City" required></textarea>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Select Quantity (₱180 each)</label>
+                        <div class="shade-quantity-list">
+                            
+                            <div class="qty-row">
+                                <span>Reine</span>
+                                <div class="qty-controls">
+                                    <button type="button" class="qty-btn" onclick="updateQty('Reine', -1)">-</button>
+                                    <input type="number" name="Qty_Reine" id="qty-Reine" class="qty-input" value="0" readonly>
+                                    <button type="button" class="qty-btn" onclick="updateQty('Reine', 1)">+</button>
+                                </div>
+                            </div>
+
+                            <div class="qty-row">
+                                <span>Queen</span>
+                                <div class="qty-controls">
+                                    <button type="button" class="qty-btn" onclick="updateQty('Queen', -1)">-</button>
+                                    <input type="number" name="Qty_Queen" id="qty-Queen" class="qty-input" value="0" readonly>
+                                    <button type="button" class="qty-btn" onclick="updateQty('Queen', 1)">+</button>
+                                </div>
+                            </div>
+
+                            <div class="qty-row">
+                                <span>Mademoiselle</span>
+                                <div class="qty-controls">
+                                    <button type="button" class="qty-btn" onclick="updateQty('Mademoiselle', -1)">-</button>
+                                    <input type="number" name="Qty_Mademoiselle" id="qty-Mademoiselle" class="qty-input" value="0" readonly>
+                                    <button type="button" class="qty-btn" onclick="updateQty('Mademoiselle', 1)">+</button>
+                                </div>
+                            </div>
+
+                            <div class="qty-row">
+                                <span>Dame</span>
+                                <div class="qty-controls">
+                                    <button type="button" class="qty-btn" onclick="updateQty('Dame', -1)">-</button>
+                                    <input type="number" name="Qty_Dame" id="qty-Dame" class="qty-input" value="0" readonly>
+                                    <button type="button" class="qty-btn" onclick="updateQty('Dame', 1)">+</button>
+                                </div>
+                            </div>
+
+                            <div class="qty-row">
+                                <span>Impératrice</span>
+                                <div class="qty-controls">
+                                    <button type="button" class="qty-btn" onclick="updateQty('Imperatrice', -1)">-</button>
+                                    <input type="number" name="Qty_Imperatrice" id="qty-Imperatrice" class="qty-input" value="0" readonly>
+                                    <button type="button" class="qty-btn" onclick="updateQty('Imperatrice', 1)">+</button>
+                                </div>
+                            </div>
+
+                            <div class="qty-row">
+                                <span>Empress</span>
+                                <div class="qty-controls">
+                                    <button type="button" class="qty-btn" onclick="updateQty('Empress', -1)">-</button>
+                                    <input type="number" name="Qty_Empress" id="qty-Empress" class="qty-input" value="0" readonly>
+                                    <button type="button" class="qty-btn" onclick="updateQty('Empress', 1)">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Payment Method</label>
+                        <select name="Payment_Method" class="styled-select" required>
+                            <option value="GCash">GCash</option>
+                            <option value="COD">Lalamove COD</option>
+                        </select>
+                    </div>
+
+                    <div class="total-box">
+                        <p>Total Items: <span id="item-count">0</span></p>
+                        <p>Grand Total: <span>₱</span><span id="total-price">0</span></p>
+                        <input type="hidden" name="Grand_Total" id="hidden-total">
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="submit-btn">CONFIRM ORDER</button>
+                    
+                    <p id="status"></p>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            © 2026 ROUGE THEORY | DREAMEDIA ENTERPRISE
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
