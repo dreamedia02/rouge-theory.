@@ -88,7 +88,6 @@
                     <div class="input-group">
                         <label>Select Quantity (₱180 each)</label>
                         <div class="shade-quantity-list">
-                            
                             <div class="qty-row">
                                 <span>Reine</span>
                                 <div class="qty-controls">
@@ -97,7 +96,6 @@
                                     <button type="button" class="qty-btn" onclick="updateQty('Reine', 1)">+</button>
                                 </div>
                             </div>
-
                             <div class="qty-row">
                                 <span>Queen</span>
                                 <div class="qty-controls">
@@ -106,7 +104,6 @@
                                     <button type="button" class="qty-btn" onclick="updateQty('Queen', 1)">+</button>
                                 </div>
                             </div>
-
                             <div class="qty-row">
                                 <span>Mademoiselle</span>
                                 <div class="qty-controls">
@@ -115,7 +112,6 @@
                                     <button type="button" class="qty-btn" onclick="updateQty('Mademoiselle', 1)">+</button>
                                 </div>
                             </div>
-
                             <div class="qty-row">
                                 <span>Dame</span>
                                 <div class="qty-controls">
@@ -124,7 +120,6 @@
                                     <button type="button" class="qty-btn" onclick="updateQty('Dame', 1)">+</button>
                                 </div>
                             </div>
-
                             <div class="qty-row">
                                 <span>Impératrice</span>
                                 <div class="qty-controls">
@@ -133,7 +128,6 @@
                                     <button type="button" class="qty-btn" onclick="updateQty('Imperatrice', 1)">+</button>
                                 </div>
                             </div>
-
                             <div class="qty-row">
                                 <span>Empress</span>
                                 <div class="qty-controls">
@@ -142,7 +136,6 @@
                                     <button type="button" class="qty-btn" onclick="updateQty('Empress', 1)">+</button>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
@@ -161,15 +154,24 @@
                     </div>
 
                     <button type="submit" id="submit-btn" class="submit-btn">CONFIRM ORDER</button>
-                    
                     <p id="status"></p>
                 </form>
             </div>
         </section>
 
-        <footer>
-            © 2026 ROUGE THEORY | DREAMEDIA ENTERPRISE
-        </footer>
+        <footer>© 2026 ROUGE THEORY | DREAMEDIA ENTERPRISE</footer>
+    </div>
+
+    <div id="customModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">🥀 ROUGE THEORY</div>
+            <div class="modal-body">
+                <h3>Order Summary Saved!</h3>
+                <p>To finalize your purchase, please <b>CONTINUE</b> to Messenger to talk to our team.</p>
+                <div class="modal-note">We will assist you with the payment and shipping details.</div>
+            </div>
+            <button onclick="closeAndRedirect()" class="modal-btn">CONTINUE TO MESSENGER</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
