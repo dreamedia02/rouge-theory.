@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rouge Theory | Official Order Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;1,700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- DITO YUNG DESIGN (CSS) --- */
+        body { margin: 0; padding: 0; background: #f8f3f0; font-family: 'Montserrat', sans-serif; }
+        .website-container { max-width: 500px; margin: auto; background: white; min-height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+        .full-img { width: 100%; height: auto; display: block; }
+        .section-box { width: 100%; overflow: hidden; }
+        .timer-bar { background: #d4a373; color: white; text-align: center; padding: 12px; font-weight: bold; font-size: 14px; }
+        .gallery-title { text-align: center; padding: 40px 20px 10px; }
+        .gallery-title h2 { font-family: 'Bodoni Moda', serif; letter-spacing: 2px; }
+        .shade-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 15px; }
+        .shade-card { position: relative; border-radius: 8px; overflow: hidden; border: 1px solid #eee; }
+        .shade-card img { width: 100%; transition: 0.3s; display: block; }
+        .shade-tag { position: absolute; bottom: 8px; left: 8px; background: white; padding: 4px 10px; font-size: 10px; font-weight: bold; border-radius: 4px; }
+        .order-section { padding: 40px 15px; background: #fffcf9; border-top: 1px solid #f0e0d0; }
+        .glass-form { background: white; padding: 30px 20px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .input-group { margin-bottom: 20px; text-align: left; }
+        label { font-size: 11px; font-weight: 600; color: #888; text-transform: uppercase; display: block; margin-bottom: 8px; }
+        input[type="text"], input[type="tel"], textarea, .styled-select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: 'Montserrat'; font-size: 14px; box-sizing: border-box; }
+        
+        /* New Qty Design */
+        .shade-quantity-list { display: flex; flex-direction: column; gap: 10px; }
+        .qty-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+        .qty-controls { display: flex; align-items: center; gap: 12px; }
+        .qty-btn { width: 30px; height: 30px; border-radius: 50%; border: 1px solid #1a1a1a; background: transparent; cursor: pointer; font-weight: bold; }
+        .qty-btn:hover { background: #1a1a1a; color: white; }
+        .qty-input { width: 30px; text-align: center; border: none; font-weight: bold; font-size: 16px; background: transparent; }
+        
+        .total-box { background: #1a1a1a; color: white; padding: 20px; border-radius: 10px; margin: 25px 0; text-align: center; }
+        .total-box span { color: #d4a373; font-weight: bold; font-size: 18px; }
+        .submit-btn { width: 100%; padding: 18px; background: #1a1a1a; color: white; border: none; border-radius: 50px; font-size: 16px; font-weight: bold; cursor: pointer; font-family: 'Bodoni Moda'; }
+        .sticky-btn { position: fixed; bottom: 20px; right: 20px; background: #1a1a1a; color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-size: 12px; font-weight: bold; z-index: 100; }
+        footer { padding: 40px; text-align: center; font-size: 10px; color: #999; }
+        input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+    </style>
+</head>
+<body>
+
+    <a href="#order-form" class="sticky-btn">ORDER NOW</a>
+
+    <div class="website-container">
+        <div class="section-box"><img src="Rouge Theory/banner.png" class="full-img"></div>
+        <div class="timer-bar">Flash Sale Ends In: <span id="timer">02:59:59</span></div>
+        
+        <div class="section-box"><img src="Rouge Theory/collection.png" class="full-img"></div>
+        <div class="section-box"><img src="Rouge Theory/features.png" class="full-img"></div>
+
+        <div class="gallery-title">
+            <h2>THE VINTAGE COLLECTION</h2>
+            <p>Select your favorite shades below</p>
+        </div>
+
+        <div class="shade-grid">
+            <div class="shade-card"><img src="Rouge Theory/reine.png"><div class="shade-tag">REINE</div></div>
+            <div class="shade-card"><img src="Rouge Theory/queen.png"><div class="shade-tag">QUEEN</div></div>
+            <div class="shade-card"><img src="Rouge Theory/mademoiselle.png"><div class="shade-tag">MADEMOISELLE</div></div>
+            <div class="shade-card"><img src="Rouge Theory/dame.png"><div class="shade-tag">DAME</div></div>
+            <div class="shade-card"><img src="Rouge Theory/imperatrice.png"><div class="shade-tag">IMPÉRATRICE</div></div>
+            <div class="shade-card"><img src="Rouge Theory/empress.png"><div class="shade-tag">EMPRESS</div></div>
+        </div>
+
+        <div class="section-box"><img src="Rouge Theory/footer-banner.png" class="full-img"></div>
+
+        <section id="order-form" class="order-section">
+            <div class="glass-form">
+                <h2 style="font-family: 'Bodoni Moda'; text-align: center;">PLACE YOUR ORDER</h2>
+                <form id="my-form" action="https://formspree.io/f/xvzvlayn" method="POST">
+                    <div class="input-group"><label>Full Name</label><input type="text" name="Name" required></div>
+                    <div class="input-group"><label>Phone Number</label><input type="tel" name="Phone" required></div>
+                    <div class="input-group"><label>Address</label><textarea name="Address" rows="2" required></textarea></div>
+
+                    <div class="input-group">
+                        <label>Select Quantity (₱180 each)</label>
+                        <div class="shade-quantity-list">
+                            <div class="qty-row"><span>Reine</span><div class="qty-controls"><button type="button" class="qty-btn" onclick="updateQty('Reine', -1)">-</button><input type="number" name="Qty_Reine" id="qty-Reine" class="qty-input" value="0" readonly><button type="button" class="qty-btn" onclick="updateQty('Reine', 1)">+</button></div></div>
+                            <div class="qty-row"><span>Queen</span><div class="qty-controls"><button type="button" class="qty-btn" onclick="updateQty('Queen', -1)">-</button><input type="number" name="Qty_Queen" id="qty-Queen" class="qty-input" value="0" readonly><button type="button" class="qty-btn" onclick="updateQty('Queen', 1)">+</button></div></div>
+                            <div class="qty-row"><span>Mademoiselle</span><div class="qty-controls"><button type="button" class="qty-btn" onclick="updateQty('Mademoiselle', -1)">-</button><input type="number" name="Qty_Mademoiselle" id="qty-Mademoiselle" class="qty-input" value="0" readonly><button type="button" class="qty-btn" onclick="updateQty('Mademoiselle', 1)">+</button></div></div>
+                            <div class="qty-row"><span>Dame</span><div class="qty-controls"><button type="button" class="qty-btn" onclick="updateQty('Dame', -1)">-</button><input type="number" name="Qty_Dame" id="qty-Dame" class="qty-input" value="0" readonly><button type="button" class="qty-btn" onclick="updateQty('Dame', 1)">+</button></div></div>
+                            <div class="qty-row"><span>Impératrice</span><div class="qty-controls"><button type="button" class="qty-btn" onclick="updateQty('Imperatrice', -1)">-</button><input type="number" name="Qty_Imperatrice" id="qty-Imperatrice" class="qty-input" value="0" readonly><button type="button" class="qty-btn" onclick="updateQty('Imperatrice', 1)">+</button></div></div>
+                            <div class="qty-row"><span>Empress</span><div class="qty-controls"><button type="button" class="qty-btn" onclick="updateQty('Empress', -1)">-</button><input type="number" name="Qty_Empress" id="qty-Empress" class="qty-input" value="0" readonly><button type="button" class="qty-btn" onclick="updateQty('Empress', 1)">+</button></div></div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Payment Method</label>
+                        <select name="Payment_Method" class="styled-select" required>
+                            <option value="GCash">GCash</option>
+                            <option value="COD">Lalamove COD</option>
+                        </select>
+                    </div>
+
+                    <div class="total-box">
+                        <p>Items: <span id="item-count">0</span> | Total: ₱<span id="total-price">0</span></p>
+                        <input type="hidden" name="Grand_Total" id="hidden-total">
+                    </div>
+
+                    <button type="submit" class="submit-btn">CONFIRM ORDER</button>
+                    <p id="status" style="margin-top: 15px; font-size: 13px; font-weight: bold; text-align: center;"></p>
+                </form>
+            </div>
+        </section>
+        <footer>© 2026 ROUGE THEORY | DREAMEDIA ENTERPRISE</footer>
+    </div>
+
+    <script>
+        /* --- DITO YUNG UTAK (JS) --- */
+        function updateQty(shade, change) {
+            const input = document.getElementById('qty-' + shade);
+            let val = parseInt(input.value) + change;
+            if (val >= 0 && val <= 12) {
+                input.value = val;
+                let totalItems = 0;
+                document.querySelectorAll('.qty-input').forEach(i => totalItems += parseInt(i.value));
+                document.getElementById('item-count').innerText = totalItems;
+                document.getElementById('total-price').innerText = (totalItems * 180).toLocaleString();
+                document.getElementById('hidden-total').value = "₱" + (totalItems * 180);
+            }
+        }
+
+        var form = document.getElementById("my-form");
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            var status = document.getElementById("status");
+            if (document.getElementById('item-count').innerText == "0") {
+                status.innerHTML = "Please select at least one shade.";
+                status.style.color = "red";
+                return;
+            }
+            status.innerHTML = "Processing...";
+            status.style.color = "#d4a373";
+            fetch(form.action, { method: 'POST', body: new FormData(form), headers: {'Accept': 'application/json'} })
+            .then(res => {
+                status.innerHTML = "Success! Redirecting...";
+                status.style.color = "green";
+                setTimeout(() => window.location.href = "https://m.me/andrea.garcia.348414", 2000);
+            });
+        });
+
+        let time = 10799; 
+        setInterval(() => {
+            let h = Math.floor(time/3600), m = Math.floor((time%3600)/60), s = time%60;
+            document.getElementById('timer').innerHTML = `${h<10?'0':''}${h}:${m<10?'0':''}${m}:${s<10?'0':''}${s}`;
+            if (time > 0) time--;
+        }, 1000);
+    </script>
+</body>
+</html>
